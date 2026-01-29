@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tes AR Astronot</title>
+    <title>Menu AR - Vape</title>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <style>
         body { margin: 0; background-color: #f0f0f0; font-family: sans-serif; }
@@ -18,16 +18,18 @@
 <body>
 
     <model-viewer 
-        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
-        ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
-        alt="Tes Astronot"
+        src="./vape_android.glb" 
+        ios-src="./vape_ios.usdz"
+        alt="Menu Vape AR"
         ar 
         ar-modes="webxr scene-viewer quick-look" 
         camera-controls 
-        auto-rotate>
+        auto-rotate
+        shadow-intensity="1"
+        max-camera-orbit="auto 90deg auto">
         
         <button slot="ar-button" class="ar-button">
-            👋 Tes Kamera AR
+            👋 Lihat di Ruangan Anda (AR)
         </button>
         
     </model-viewer>
