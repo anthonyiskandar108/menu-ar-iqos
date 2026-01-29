@@ -3,15 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menu AR - Vape</title>
+    <title>IQOS ILUMA - AR Menu</title>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <style>
-        body { margin: 0; background-color: #f0f0f0; font-family: sans-serif; }
-        model-viewer { width: 100vw; height: 100vh; }
+        body { margin: 0; background-color: #fafafa; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        
+        model-viewer { width: 100vw; height: 100vh; background-color: #fafafa; }
+
+        /* Desain Tombol yang Lebih Menarik */
         .ar-button {
-            background-color: white; border-radius: 4px; border: none;
-            position: absolute; bottom: 16px; right: 16px; padding: 12px 24px;
-            font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+            background-color: #007AFF; /* Warna Biru iPhone */
+            color: white;
+            border-radius: 30px;
+            border: none;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -20,16 +35,18 @@
     <model-viewer 
         src="./vape_android.glb" 
         ios-src="./vape_ios.usdz"
-        alt="Menu Vape AR"
+        alt="IQOS ILUMA 3D"
         ar 
         ar-modes="webxr scene-viewer quick-look" 
         camera-controls 
         auto-rotate
         shadow-intensity="1"
-        max-camera-orbit="auto 90deg auto">
+        /* INI KUNCI RAHASIANYA: */
+        max-camera-orbit="auto 90deg auto"
+        min-camera-orbit="auto 0deg auto">
         
         <button slot="ar-button" class="ar-button">
-            👋 Lihat di Ruangan Anda (AR)
+            <span>📷</span> Lihat di Meja Anda
         </button>
         
     </model-viewer>
